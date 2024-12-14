@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Heading</title>
+    <link rel="stylesheet" href="firstPageStyles.css">
 </head>
 <body>
-    <p>ehfuz</p>
+    <header class="block">
+        <h2>Heading</h2>
+    </header>
+     
+    <div class="block">
+        <div>
+            <p><em>* indicates a required field</em></p>
+        </div>
+        <div class="container">
+            <form action="" class="u_container">
+                <div>
+                    <label for="image">Choisir une image</label>
+                    <input type="file"  id="image" name="image" value="image"><br><br>
+                    <label for="fname">First name * </label><br>
+                    <input type="text" id ="fname" name="fname" required placeholder="e.g. Fred"><br>
+                    <label for="lname">Last name *</label><br>
+                    <input type="text" id ="lname" name="lname" required placeholder="e.g. Jack"><br>
+                </div>
+                <label for="email">E-mail adress * </label><br>
+                <input type="email" id ="email" name="email" required placeholder="e.g. eeeee@mmm.cc"><br>
+                <label for="phone">Phone number *</label><br>
+                <input type="tel" pattern="+[0-9]{3}-[0-9]{9}" id ="phone" name="phone" placeholder="e.g. +212-656565656" required><br>
+                <label for="adress">Adress </label><br>
+                <input type="text" id ="adress" name="adress" ><br>
+                <label for="city">City </label><br>
+                <input type="text" id ="city" name="city"  placeholder="e.g. London"><br>
+                <label for="country">Country* </label><br>
+                <input type="text" id ="country" name="country" required placeholder="e.g. U.S.A"><br>
+                <label for="codePostal">Code Postal </label><br>
+                <input type="text" id ="codePostal" name="codePostal" placeholder="e.g. 8888"><br>
+                <br>
+                <input type="submit" value="submit">
+            </form>
+        </div>  
+    </div>
+    <footer class="block">
+        <a href="HomePage.html">&#8592;Go back</a>
+        <a href="">Next	&#8594;</a>
+    </footer>
+
 </body>
 </html>
