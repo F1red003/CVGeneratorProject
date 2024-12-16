@@ -1,8 +1,49 @@
-.icons{
-    width: 80px;
-    
+body {
+  font-family: Verdana;
+}
+h1,
+h3 {
+  text-align: center;
+}
+#btnContainer {
+  text-align: center;
 }
 .container{
-    cursor: pointer;
-    background-color: aqua;
+    margin: 15px 0;
+    background-color: rgb(42, 95, 243);
+    display: flex;
+    flex-direction: row;
+
+}
+#createBtn {
+  background-color: rgb(8, 250, 250);
+  border-radius: 5px;
+  width: 200px;
+  height: 70px;
+  font-size: large;
+  font-weight: bold;
+  transition: width 0.5s, height 0.5s;
+}
+#createBtn:hover {
+  width: 220px;
+  height:80px;
+}
+.icons {
+  width: 80px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+.homeNaveLinks {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(17, 212, 46);
+  justify-content: space-around;
 }

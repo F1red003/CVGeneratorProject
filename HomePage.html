@@ -8,26 +8,27 @@
   </head>
   <body>
     <header>
+      <div >
+        <ul class="homeNaveLinks">
+          <li>
+            <p><a href="#aboutUs">About Us</a></p>
+          </li>
+          <li>
+            <p><a href="#contactUs">Contact us</a></p>
+          </li>
+          <li>
+            <p><a href="#home">Home</a></p>
+          </li>
+        </ul>
+      </div>
       <!--don't forget to change the site's name later !!!!!-->
 
       <h1>Create your professional Resume with [site's name here]</h1>
     </header>
-    <nav id="homaNaveLinks">
-      <ul>
-        <li>
-          <p><a href="#about">About</a></p>
-        </li>
-        <li>
-          <p><a href="#contact">Contact us</a></p>
-        </li>
-        <li>
-          <p><a href="#home">Home</a></p>
-        </li>
-      </ul>
-    </nav>
+    
     <h3>Create your very own professional Resume and download it</h3>
-    <div>
-      <button><a href="firstPage.html">Create your Resume </a></button>
+    <div id="btnContainer" >
+      <button id="createBtn"><a href="firstPage.html">Create your Resume </a></button>
     </div>
     <section>
       <div class="container">
@@ -41,19 +42,21 @@
           </div>
         </a>
       </div>
-
-      <div class="container">
+      <div>
         <a href="firstPage.html">
-          <div>
-            <h4>More likely to land a job</h4>
-            <p>[A paragraph here]</p>
-          </div>
-          <div>
-            <img src="/images/findJob.png" alt="FindAJob" class="icons" />
-          </div>
+            <div class="container">
+              <div>
+                <img src="/images/findJob.png" alt="FindAJob" class="icons" />
+              </div>
+                <div>
+                  <h4>More likely to land a job</h4>
+                  <p>[A paragraph here]</p>
+                </div>
+                
+              
+            </div>
         </a>
       </div>
-
       <div class="container">
         <a href="firstPage.html">
           <div>
@@ -65,19 +68,54 @@
           </div>
         </a>
       </div>
-    </section>
-    <section class="reviews">
-      <header>
-        <h2>What do our users say about [site's name here]</h2>
-        <h3>They all found their dream job, thanks to [site's name here]</h3>
-      </header>
-      <ul class="revierws">
-        <li>
-
-        </li>
-      </ul>
-      
-    </section>
+      <section class="aboutUs" id="aboutUs">
+        <div class="aboutText&Img">
+          <div class="aboutImg">
+            <img src="/images/cvExemple.png" alt="cvExemple">
+          </div>
+          <div class="aboutText"> [A paragraph here]</div>
+        </div>
+      </section>
+      <section class="contactUs" id="contactUs">
+        <div class="text">
+          Contact us Form
+       </div>
+       <form action="#">
+          <div class="form-row">
+             <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label for="">First Name</label>
+             </div>
+             <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label for="">Last Name</label>
+             </div>
+          </div>
+          <div class="form-row">
+             <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label for="">Email Address</label>
+             </div>
+             
+          </div>
+          <div class="form-row">
+          <div class="input-data textarea">
+             <textarea rows="8" cols="80" required></textarea>
+             <br />
+             <div class="underline"></div>
+             <label for="">Write your message</label>
+             <br />
+             <div class="form-row submit-btn">
+                <div class="input-data">
+                   <div class="inner"></div>
+                   <input type="submit" value="submit">
+                </div>
+             </div>
+       </form>
+      </section>
 
     <footer>
       <!--don't forget to change the site's name later !!!!!-->
