@@ -1,14 +1,87 @@
-.container{
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    height:auto;
-    
+.bod{
+    display: flex;
     
 }
-.block{
+.bod2{
+    justify-content: center;
     text-align: center;
-    display: block;
     align-items: center;
-    justify-content:center;
+    transform: translateX(300px);
+}
+.container{
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-left:1% ;
+    margin-right: 1%;
+}
+.container2{
+    box-shadow: 10px 10px 30px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 244, 244);
+    border-radius: 10px;
+}
+.block{
+    
+    text-align: center;
+   
+}
+.C1{
+    display:flex;
+    justify-content: center;
+    margin-left:35px ;
+}
+.C2{
+    display:inline;
+}
+.photo{
+    width: 100px;
+    height:100px;
+    border-style: dotted;
+    border-color: antiquewhite;
+    background-color: bisque;
+    margin:5px;
+}
+.C3{
+    display: flex;
+    justify-content: center;
+
+}
+.c3{
+    margin:5px;
+    text-align: center;
+}
+
+.inputs{
+    height:45px;
+    width: 270px;
+    font-size: 17px;;
+}
+#adress{
+    width:560px;
+}
+.aside{
+    margin:0%;
+    padding: 0%;
+    width: 200px;
+    height: auto;
+    background-color: aqua;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+}
+.click{
+    background-color: rgb(27, 189, 162);
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    border: 2px solid  rgb(27, 189, 162);
+    border-radius: 5%;
+}
+.click:hover{
+    background-color: aqua;
+    border: 2px solid aqua;
 }
