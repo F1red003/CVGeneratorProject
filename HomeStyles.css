@@ -1,5 +1,6 @@
 body {
   font-family: Verdana;
+  margin: 0;
 }
 h1,
 h3 {
@@ -8,12 +9,27 @@ h3 {
 #btnContainer {
   text-align: center;
 }
-.container{
-    margin: 15px 0;
-    background-color: rgb(42, 95, 243);
-    display: flex;
-    flex-direction: row;
-
+.container {
+  margin: 15px 0;
+  background-color: rgb(42, 95, 243);
+  display: flex;
+  flex-direction: row;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.iconContainer {
+  background-color: rgb(42, 95, 243);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 15px;
+}
+.paragraphContainer {
+  padding-left: 2%;
+}
+.iconContainer1 {
+  margin-top: 50%;
+  margin-bottom: 50%;
 }
 #createBtn {
   background-color: rgb(8, 250, 250);
@@ -26,7 +42,7 @@ h3 {
 }
 #createBtn:hover {
   width: 220px;
-  height:80px;
+  height: 80px;
 }
 .icons {
   width: 80px;
@@ -47,3 +63,27 @@ ul {
   background-color: rgb(17, 212, 46);
   justify-content: space-around;
 }
+.aboutUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutTextImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  border: 2px solid black;
+}
+.aboutImg {
+  flex: 1;
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+.cvExemple {
+  width: 300px;
+}
+
