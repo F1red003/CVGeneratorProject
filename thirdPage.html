@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About you</title>
-    <link rel="stylesheet" href="secondPageStyle.css">
+    <link rel="stylesheet" href="thirdPageStyle.css">
 </head>
 <body>
 	<div class="bod">
@@ -23,40 +23,35 @@
 					<div class="container">
 						<div class="container2">
 							<form action="">
-								<div class="C3">
-									<div class="c3">
-										<label for="school">School Name</label><br>
-										<input type="text"  class="inputs" id ="school" name="school"><br>
-									</div>
-									<div class="c3">
-										<label for="city">City</label><br>
-										<input type="text"  class="inputs" id ="city" name="city" placeholder="e.g. New York" required><br>
-									</div>
-								</div>
-								<div class="C3">
-									<div class="c3">
-										<label for="degree">Degree </label><br>
-										<input type="text"  class="inputs" id ="degree" name="degree"  placeholder="e.g. Master"><br>
-									</div>
-									<div class="c3">
-										<label for="study">Field of study </label><br>
-										<input type="text"  class="inputs" id ="study" name="study" placeholder="e.g. Computer Science"><br>
-									</div>
-								</div>
-								<div class="C3">
-									<div class="c3">
-										<label for="Sdate">Start Date</label><br>
-										<input type="month"  class="inputs" id ="Sdate" name="Sdate" required placeholder="e.g. U.S.A"><br>
-									</div>
-									<div class="c3">
-										<label for="Edate">End Date </label><br>
-										<input type="month"  class="inputs" id ="Edate" name="Edate"><br>
-									</div>
-								</div>
-                <div class="c3 >
-                  <label for="Desc">Education description </label><br>
-                  <textarea name="Desc" id="Desc" class="textA"></textarea>
+                <div class="c3">
+                  <label for="prof">Professional profil </label><br>
+                  <textarea name="prof" id="prof" class="textA" ></textarea>
                 </div>
+								<div class="c3">
+									<label for="ach">Achievments </label><br>
+									<textarea name="ach" id="ach" class="textA" placeholder="place / between every achievment"></textarea>
+								</div>
+                <div class="c3">
+                  <fieldset>
+                    <legend>Skills</legend>
+                      <div class="C3">
+                        <div class="c3">
+                          <label for="school">Skill</label><br>
+                          <input type="text"  class="inputs" id ="school" name="school" placeholder="e.g. Excel"><br>
+                        </div>
+                        <div class="c3">
+                          <label for="level">Level</label><br>
+                          <select name="level" id="level" class="inputs">
+                            <option value="Select Level">Select Level</option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Skilfull">Skilfull</option>
+                            <option value="Experienced">Experienced</option>
+                          </select>
+                        </div>
+                      </div>
+                  </fieldset>
+								</div>
 								<br>
 								<input type="submit" value="submit">
 							</form>
@@ -70,7 +65,7 @@
 					<a class="click" href="secondPage.html">&#8592;Go back</a>
 				</div>
 				<div class="click" >
-					<a class="click" href="">Next	&#8594;</a>
+					<a class="click" href="fourthPage.html">Next	&#8594;</a>
 				</div>
 			</footer>
 		</div>
