@@ -41,7 +41,7 @@
     height:100px;
     border-style: dotted;
     border-color: antiquewhite;
-    background-color: bisque;
+    background-color: rgb(243, 230, 214);
     margin:5px;
 }
 .C3{
@@ -52,6 +52,7 @@
 .c3{
     margin:5px;
     text-align: center;
+    
 }
 
 .inputs{
@@ -68,6 +69,7 @@
     width: 200px;
     height: auto;
     background-color: aqua;
+    position:static;
 }
 .footer{
     display: flex;
