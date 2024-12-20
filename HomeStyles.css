@@ -1,6 +1,7 @@
 body {
   font-family: Verdana;
   margin: 0;
+  background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
 }
 h1,
 h3 {
@@ -11,7 +12,7 @@ h3 {
 }
 .container {
   margin: 15px 0;
-  background-color: rgb(42, 95, 243);
+  background-color: rgb(62, 42, 243);
   display: flex;
   flex-direction: row;
   margin-left: 15%;
@@ -32,13 +33,21 @@ h3 {
   margin-bottom: 50%;
 }
 #createBtn {
-  background-color: rgb(8, 250, 250);
+  background: -webkit-linear-gradient(
+    right,
+    #56d8e4,
+    #9f01ea,
+    #56d8e4,
+    #9f01ea
+  );
+  transition: all 0.4s;
   border-radius: 5px;
   width: 200px;
   height: 70px;
   font-size: large;
   font-weight: bold;
   transition: width 0.5s, height 0.5s;
+  color: white;
 }
 #createBtn:hover {
   width: 220px;
@@ -60,8 +69,11 @@ ul {
 .homeNaveLinks {
   display: flex;
   flex-direction: row;
-  background-color: rgb(17, 212, 46);
+  background-color: rgb(255, 255, 255);
   justify-content: space-around;
+  margin: 0%;
+  padding: 10px;
+  
 }
 .aboutUs {
   display: flex;
@@ -87,3 +99,65 @@ h2{
   width: 300px;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+
+
+.btncontainer {
+  /* background-color: #fff; */
+   width: 100%; 
+  height: 50px; 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  
+
+}
+
+.center {
+  width: 180px;
+  height: 60px;
+  position: absolute;
+}
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 2s ease-in-out;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #ffffff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 2s ease-in-out;
+  background: linear-gradient(115deg,#9f01ea 10%,#56d8e4 90%);
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
+.globalCntainer{
+  display: flex;
+}
