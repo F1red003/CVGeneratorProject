@@ -10,20 +10,28 @@ h3 {
 #btnContainer {
   text-align: center;
 }
+.iconBlock{
+  border-radius: 5px;
+}
 .container {
   margin: 15px 0;
-  background-color: rgb(62, 42, 243);
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: row;
   margin-left: 15%;
   margin-right: 15%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 56px 0px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
 }
 .iconContainer {
-  background-color: rgb(42, 95, 243);
+  background-color: rgb(255, 255, 255);
   justify-content: center;
   text-align: center;
   align-items: center;
   padding: 15px;
+  border-right: 2px solid black;
+  border-radius: 5px  0px 0px 5px;
 }
 .paragraphContainer {
   padding-left: 2%;
@@ -79,18 +87,32 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 30px;
 }
 .aboutTextImg {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 90%;
   border: 2px solid black;
+  padding: 10px;
+  margin: 0 auto; /* Center the container */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  background-color: #fff; /* Add background color */
+}
+.aboutText{
+  margin: 30px;
 }
 .aboutImg {
   flex: 1;
   text-align: center;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
 }
 h2{
   text-align: center;
@@ -160,4 +182,15 @@ svg {
 }
 .globalCntainer{
   display: flex;
+}
+footer{
+  width: 100%;
+  background-color: #131314;
+  color: rgb(125, 125, 125);
+  text-align: center;
+  padding: 2px;
+  margin-top: 20px;
+}
+#terms{
+  color:  rgb(125, 125, 125);
 }
