@@ -53,8 +53,7 @@ body{
     margin-left: 270px;
     margin-right: 270px;
     box-sizing: content-box;
-    
-    
+    border-radius: 10px;    
 }
 .block{
     margin-bottom: 30px;
