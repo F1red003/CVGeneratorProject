@@ -2,6 +2,7 @@ body {
   font-family: Verdana;
   margin: 0;
   background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+  width: 100%;
 }
 h1,
 h3 {
@@ -78,9 +79,30 @@ ul {
   display: flex;
   flex-direction: row;
   background-color: rgb(255, 255, 255);
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0%;
   padding: 10px;
+  padding-right: 200px;
+  align-items: center;
+  
+}
+.NaveLinks{
+  font-size: 17px;
+}
+.NaveLinks:hover{
+  color: rgb(113, 113, 113);
+
+}
+.navBar{
+  display: flex;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+}
+.logoContainer{
+  
+  width: 110px;
+  height: 80px;
   
 }
 .aboutUs {
@@ -88,6 +110,7 @@ ul {
   justify-content: center;
   align-items: center;
   margin: 30px;
+  
 }
 .aboutTextImg {
   display: flex;
