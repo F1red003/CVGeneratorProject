@@ -1,102 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Heading</title>
-    <link rel="stylesheet" href="firstPageStyles.css">
-</head>
-<body>
-	<div class="bod">
-		<div class="barreGauche">
-			<p>HeaDing</p>
-			<footer class="footer">
-				<div class="click" >
-					<a class="click1" id="Back" href="HomePage.html">Go back</a>
-				</div>
-				<div class="click" >
-					<a class="click1" id="Next" href="secondPage.html">Next</a>
-				</div>
-			</footer>
-		</div>
-		<div class="bod2">
-			<div class="container">
-						<div class="container2">
-							<header class="block">
-								<h2>Heading</h2>	
-							</header>
-							<form action="">
-								<div class="C1">
-									<div>
-										<div>
-											<div class="photo"></div>
-											<input type="file" id="image" name="image" value="image" title="choose Photo"><br><br>
-										</div>
-									</div>
-									<div class="C2">
-										<div>
-											<label for="fname">First name * </label><br>
-											<input type="text"  class="inputs" id ="fname" name="fname" required placeholder="e.g. Fred"><br>
-										</div>
-										<div>
-											<label for="lname">Last name *</label><br>
-											<input type="text"  class="inputs" id ="lname" name="lname" required placeholder="e.g. Jack"><br>
-										</div>
-									</div>   
-								</div>
-								<div class="C3">
-									<div class="c3">
-										<label for="email">E-mail adress * </label><br>
-										<input type="email"  class="inputs" id ="email" name="email" required placeholder="e.g. eeeee@mmm.cc"><br>
-									</div>
-									<div class="c3">
-										<label for="phone">Phone number *</label><br>
-										<input type="tel"  class="inputs" pattern="+[0-9]{3}-[0-9]{9}" id ="phone" name="phone" placeholder="e.g. +212-656565656" required><br>
-									</div>
-								</div>
-								<div class="c3">
-									<label for="adress">Adress </label><br>
-									<input type="text"  class="inputs" id ="adress" name="adress" ><br>
-								</div>
-								<div class="C3">
-									<div class="c3">
-										<label for="city">City </label><br>
-										<input type="text"  class="inputs" id ="city" name="city"  placeholder="e.g. London"><br>
-									</div>
-									<div class="c3">
-										<label for="dateOfBirth">Date of birth</label><br>
-										<input type="date"  class="inputs" id ="dateOfBirth" name="dateOfBirth" placeholder="e.g. 8888"><br>
-									</div>
-								</div>
-								<div class="C3">
-									<div class="c3">
-										<label for="country">Country * </label><br>
-										<input type="text"  class="inputs" id ="country" name="country" required placeholder="e.g. U.S.A"><br>
-									</div>
-									<div class="c3">
-										<label for="nat">Nationality </label><br>
-										<input type="text"  class="inputs" id ="nat" name="nat"><br>
-									</div>
-								</div>
-								<div class="C3">
-									<div class="c3">
-										<label for="LinkedIn">LinkedIn </label><br>
-										<input type="text"  class="inputs" id ="LinkedIn" name="LinkedIn"><br>
-									</div>
-									<div class="c3">
-										<label for="JobT">Job title</label><br>
-										<input type="text"  class="inputs" id ="JobT" name="JobT" placeholder="e.g. Student"><br>
-									</div>
-								</div>
-								<br>
-								<input type="submit" value="save" class="submit">
-								<br>
-							</form>	
+    <link rel="stylesheet" href="firstPageStyles.css" />
+  </head>
+  <body>
+    <div class="bod">
+      <div class="barreGauche">
+				<div class="navProg">
+					<div class="page heading" id="heading">
+						<img src="/images/heading.png" alt="icon"  class="icon">
+						<p class="stage">Heading</p>
+					</div>
+					<div class="page education" id="education">
+						<img src="/images/education.png" alt="icon" class="icon">
+						<p class="stage">Education</p>
+					</div>
+					<div class="page aboutU" id="aboutU">
+						<img src="/images/aboutYou.png" alt="icon" class="icon">
+						<p class="stage">About You</p>
 						</div>
+					<div class="page profExperience" id="profExperience">
+						<img src="/images/profEXPP.png" alt="icon" class="icon">
+						<p class="stage">Professional Experience</p>
+					</div>
+					<div class="page addInfo" id="addInfo">
+						<img src="/images/Addinfo.png" alt="icon" class="icon">
+						<p class="stage">Additional informations</p>
+					</div>
+				</div>
+						<footer class="footer">
+							<div class="click">
+								<a class="click1" id="Back" href="HomePage.html">Go back</a>
+							</div>
+							<div class="click">
+								<a class="click1" id="Next" href="secondPage.html">Next</a>
+							</div>
+						</footer>
+      </div>
+      <div class="bod2">
+        <div class="container">
+			<div class="text">
+			   Heading
 			</div>
-			<br><br>
+			<form action="#">
+				<div class="form-row C1">
+				   <div class=" profilPhoto">
+					  <div class="photo"></div>
+					  <input type="file" id="image" name="image" value="image" title="choose Photo"/>  
+				   </div>
+					 <div class="C2">
+						<div class="input-data" id="Fname">
+							<input type="text" placeholder="">
+							<div class="underline"></div>
+							<label for="">First Name</label>
+							
+						 </div>
+						 <div class="input-data">
+							<input type="text" placeholder="">
+							<div class="underline"></div>
+							<label for="">Last Name</label>
+						 </div>
+					 </div> 
+				</div>
+
+			   <div class="form-row">
+				  <div class="input-data">
+					 <input type="email" placeholder="">
+					 <div class="underline"></div>
+					 <label for="">Email Address</label>
+				  </div>
+					<div class="input-data">
+						<input type="text" placeholder="">
+						<div class="underline"></div>
+						<label for="">Phone number * </label>
+					 </div>
+			   </div>
+				 <div class="form-row">
+				  <div class="input-data">
+					 <input type="text"  placeholder="">
+					 <div class="underline"></div>
+					 <label for="">Address</label>
+				  </div>
+			   </div>
+				 <div class="form-row">
+				  <div class="input-data">
+					 <input type="text" placeholder="" >
+					 <div class="underline"></div>
+					 <label for="">City</label>
+				  </div>
+					<div class="input-data">
+						<input type="date" placeholder="" >
+						<div class="underline"></div>
+						<label for="">Date of birth</label>
+					 </div>
+			   </div>
+				 <div class="form-row">
+				  <div class="input-data">
+					 <input type="text" placeholder="" >
+					 <div class="underline"></div>
+					 <label for="">Country</label>
+				  </div>
+					<div class="input-data">
+						<input type="text" placeholder="" >
+						<div class="underline"></div>
+						<label for="">Nationality</label>
+					 </div>
+			   </div>
+				 <div class="form-row">
+				  <div class="input-data">
+					 <input type="text" placeholder="" >
+					 <div class="underline"></div>
+					 <label for="">LinkedIn</label>
+				  </div>
+					<div class="input-data">
+						<input type="text" placeholder="" >
+						<div class="underline"></div>
+						<label for="">Job title</label>
+					 </div>
+			   </div>
+			   
+				  <div class="form-row submit-btn">
+				   <div class="input-data">
+					  <div class="inner"></div>
+					  <input type="submit" value="save">
+				   </div>
+				</div>
+				  
+			</form>
 			
-		</div>
-  </div>
-</body>
+			</div>
+      </div>
+    </div>
+  </body>
 </html>
