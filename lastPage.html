@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nathalie Perrin - CV</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+      }
+      .container {
+        width: 800px;
+        margin: 20px auto;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .profile-info {
+        max-width: 70%;
+      }
+      .profile-photo img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+      h1 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+      h2 {
+        color: #0078d7;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .contact-info {
+        margin-top: 10px;
+        color: #555;
+      }
+      .section {
+        margin-top: 30px;
+      }
+      .section h3 {
+        border-bottom: 2px solid #0078d7;
+        display: inline-block;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        color: #333;
+      }
+      .experience {
+        margin-bottom: 20px;
+      }
+      .experience h4 {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #0078d7;
+      }
+      .experience .details {
+        font-size: 14px;
+        color: #555;
+      }
+      .skills span {
+        background: #e8f4fd;
+        color: #0078d7;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin: 5px;
+        display: inline-block;
+        font-size: 14px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      ul li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="profile-info">
+          <h1>Nathalie Perrin</h1>
+          <h2>Ingénieure Logiciel Senior</h2>
+          <p class="contact-info">
+            +33 6 98 76 54 32 | email@example.com | linkedin.com | Paris, France
+          </p>
+        </div>
+        <div class="profile-photo">
+          <img src="/images/quick.png" alt="Nathalie Perrin" />
+        </div>
+      </header>
+
+      <div class="section">
+        <h3>Profil Professionnel</h3>
+        <p>
+          Ingénieure Logiciel Senior avec plus de 10 ans d'expérience,
+          spécialisée en Python, Django et Kubernetes. Enthousiaste à l'idée de
+          concevoir et de développer des applications hautement efficaces, tout
+          en travaillant en équipe pour atteindre les objectifs.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>Expérience Professionnelle</h3>
+
+        <div class="experience">
+          <h4>Job Title - Company</h4>
+          <p class="details">start date - end date | city</p>
+          <ul>
+            <li>
+              Description: xxxxxxxxxxxxx
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <h3>Education</h3>
+
+        <div class="experience">
+          <h4>School - City</h4>
+          <p class="details">Start date - end date</p>
+          <ul>
+            <li>Degree: xxxxxxxxxxxxxxxxxxx</li>
+            <li>Field of study: xxxxxxxxxxxxxx</li>
+            <li>Education description: xxxxxxxxxxxxxxx</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Projets Open Source</h3>
+        <ul>
+          <li>
+            <strong>Django Optimizer:</strong> Un outil pour optimiser les
+            performances des applications Django.
+            <a href="https://github.com/nathalieperrin/django-optimizer"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <strong>KubeMonitor:</strong> Un outil de surveillance pour les
+            déploiements Kubernetes.
+            <a href="https://github.com/nathalieperrin/kubemonitor">GitHub</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Compétences</h3>
+        <div class="skills">
+          <span>Python</span><span>Django</span><span>APIs</span
+          ><span>API Restful</span><span>Celery</span><span>pipenv</span>
+          <span>Sentry</span><span>Pytest</span><span>Kubernetes</span
+          ><span>Linux</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Formation</h3>
+        <p>
+          Master en Informatique - Université Pierre et Marie Curie (2011 -
+          2013) | Paris, France
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

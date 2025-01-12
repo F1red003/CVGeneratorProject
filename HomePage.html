@@ -5,6 +5,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CraftMyCV</title>
+    <style>
+      .questionsContainer {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    width: 60%;
+}
+
+.question h3 {
+    margin: 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question p {
+    margin: 10px 0 0;
+    display: none; /* Hide answers by default */
+    font-size: 16px;
+    color: #555;
+}
+
+.question.active p {
+    display: block; /* Show answers when the question is clicked */
+}
+
+.arrow {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.question.active .arrow {
+    transform: rotate(180deg); /* Rotate arrow when active */
+}
+
+    </style>
     
   </head>
   <body>
@@ -105,6 +153,64 @@
             <img class="cvExemple" src="/images/cvExemple.png" alt="cvExemple">
           </div>
         </div>
+      </section>
+      <section class="questions" id="questions">
+        <div class="questionsContainer">
+          <h2>Frequently Asked Questions</h2>
+          <div class="question">
+              <h3>How do I create a resume with CraftMyCV? <span class="arrow">▼</span></h3>
+              <p>Creating a resume with CraftMyCV is quick and easy. Simply click on the “Create your CV” button on the homepage, and you will be taken to our resume builder. From there, you can enter your personal details, add your work experience and skills, and customize the content to suit your needs. Once you are satisfied with your resume, you can download it in PDF format and start applying for jobs.</p>
+          </div>
+          <div class="question">
+              <h3>What does a CV consist of? <span class="arrow">▼</span></h3>
+              <p>A CV generally includes the following information:
+                <br>
+                <br>
+                Essential personal details: First and last name, address, city, email address, phone number(s)...
+                <br>
+                <br>
+                Optional/additional information: ID photo, gender, date of birth, place of birth, nationality, marital status, driving license, link to a website or your social media profiles (LinkedIn, Facebook).
+                <br>
+                <br>
+                Academic and/or professional background: Your education (include the date of obtaining a certificate or diploma and its issuance date), your professional experiences (employers, positions, and tasks performed), your skills, language proficiency, courses (training), internships you have completed, extracurricular activities (such as volunteer work), your references, hobbies, and personality traits.
+                <br>
+                <br>
+                All information must be complete and accurate (pay attention to languages, which you should actually be proficient in).</p>
+          </div>
+          <div class="question">
+              <h3>Tips for Writing the Perfect CV? <span class="arrow">▼</span></h3>
+              <p>In CraftMyCV, you will find advice grouped by themes to help you craft an optimal CV. Here are some general tips:
+                <br>
+                <br>
+                Only provide relevant information that adds value to the job you are applying for.
+                <br>
+                <br>
+                Avoid mentioning hobbies or interests that might seem odd or raise questions.
+                <br>
+                <br>
+                The main information should appear on the first page. Include a brief description of your personal profile.
+                <br>
+                <br>
+                Use bullet points and numbered lists to improve the clarity of your CV for recruiters.
+                <br>
+                <br>
+                Always opt for a chronological CV unless otherwise specified in the job offer.
+                <br>
+                <br>
+                Be concise but convincing when presenting your CV. Mention important information in a clear and concise manner.
+              </p>
+          </div>
+      </div>
+      
+      <script>
+          // JavaScript to toggle visibility of the answer
+          document.querySelectorAll('.question').forEach(question => {
+              question.addEventListener('click', () => {
+                  question.classList.toggle('active');
+              });
+          });
+      </script>
+      
       </section>
     <footer>
       <!--don't forget to change the site's name later !!!!!-->
