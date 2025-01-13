@@ -1,67 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Professional Experience</title>
-    <link rel="stylesheet" href="fourthPageStyle.css">
-</head>
-<body>
-	<div class="bod">
-		<div class="barreGauche">
-			<p>Professional Experience</p>
-			<footer class="footer">
-				<div class="click" >
-					<a class="click1" id="Back" href="thirdPage.html">Go back</a>
-				</div>
-				<div class="click" >
-					<a class="click1" id="Next" href="fifthPage.html">Next</a>
-				</div>
-			</footer>
-		</div>
-		<div class="bod2">
-			<div class="container">
-						<div class="container2">
-							<header class="block">
-								<h2>Professional Experience</h2>	
-							</header>
-							<form action="">
-								<div class="C3">
-									<div class="c3">
-										<label for="JobT">Job Title * </label><br>
-										<input type="text"  class="inputs" id ="JobT" name="JobT" required placeholder="e.g. manager" required><br>
-									</div>
-									<div class="c3">
-										<label for="city">City </label><br>
-										<input type="text"  class="inputs" id ="city" name="city"  placeholder="e.g. London"><br>
-									</div>
-								</div>
-								<div class="c3">
-									<label for="company">Company * </label><br>
-									<input type="text"  class="inputs" id ="company" name="company"  placeholder="e.g. Capgemini" required><br>
-								</div>
-                <div class="C3">
-									<div class="c3">
-										<label for="Sdate">Start Date</label><br>
-										<input type="month"  class="inputs" id ="Sdate" name="Sdate"><br>
-									</div>
-									<div class="c3">
-										<label for="Edate">End Date </label><br>
-										<input type="month"  class="inputs" id ="Edate" name="Edate"><br>
-									</div>
-								</div>
-                <div class="c3" >
-									<label for="Desc">Description </label><br>
-									<textarea name="Desc" id="Desc" class="textA"></textarea>
-								</div>
-								<br>
-								<input type="submit" value="Save" class="submit">
-							</form>	
-						</div>
-			  </div>
-			<br><br>
-			
-		</div>
-  </div>
-</body>
+    <link rel="icon" href="/images/LOGO.png">
+    <link rel="stylesheet" href="fourthPageStyle.css" />
+  </head>
+  <body>
+    <div class="bod">
+      <div class="barreGauche">
+        <div class="navProg">
+          <div class="page " id="heading">
+            <img src="/images/heading.png" alt="icon" class="icon" />
+            <p class="stage">Heading</p>
+          </div>
+          <div class="page education" id="education">
+            <img src="/images/education.png" alt="icon" class="icon" />
+            <p class="stage">Education</p>
+          </div>
+          <div class="page aboutU" id="aboutU">
+            <img src="/images/aboutYou.png" alt="icon" class="icon" />
+            <p class="stage">About You</p>
+          </div>
+          <div class="page profExperience" id="profExperience">
+            <img src="/images/profEXPP.png" alt="icon" class="icon" />
+            <p class="stage">Professional Experience</p>
+          </div>
+          <div class="page addInfo" id="addInfo">
+            <img src="/images/Addinfo.png" alt="icon" class="icon" />
+            <p class="stage">Additional informations</p>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="click">
+            <a class="click1" id="Back" href="thirdPage.html">Go back</a>
+          </div>
+          <div class="click">
+            <a class="click1" id="Next" href="fifthPage.html">Next</a>
+          </div>
+        </footer>
+      </div>
+      <div class="bod2">
+        <div class="container">
+          <div class="text">Professional Experience</div>
+          <form action="#">
+            <div class="form-row">
+              <div class="input-data">
+                <input type="text" placeholder="" required />
+                <div class="underline"></div>
+                <label for="">Job title</label>
+              </div>
+              <div class="input-data">
+                <input type="text" placeholder="" />
+                <div class="underline"></div>
+                <label for="">City </label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-data">
+                <input type="text"  placeholder="" required />
+                <div class="underline"></div>
+                <label for="">Company</label>
+              </div>
+                  
+            </div>
+            <div class="form-row">
+              <div class="input-data">
+                <input type="date" placeholder="" />
+                <div class="underline"></div>
+                <label for="">Start Date</label>
+              </div>
+              <div class="input-data">
+                <input type="date" placeholder="" />
+                <div class="underline"></div>
+                <label for="">End date</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-data textarea">
+                <textarea rows="8" cols="80" placeholder=""></textarea>
+                <div class="underline"></div>
+                <label for="">Job description</label>
+              </div>
+            </div>
+            
+
+            <div class="form-row submit-btn">
+              <div class="input-data">
+                <div class="inner"></div>
+                <input type="submit" value="save" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
