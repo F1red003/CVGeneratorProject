@@ -1,68 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About you</title>
-    <link rel="stylesheet" href="thirdPageStyle.css">
-</head>
-<body>
-	<div class="bod">
-		<div class="barreGauche">
-			<p>About you</p>
-			<footer class="footer">
-				<div class="click" >
-					<a class="click1" id="Back" href="secondPage.html">Go back</a>
-				</div>
-				<div class="click" >
-					<a class="click1" id="Next" href="fourthPage.html">Next</a>
-				</div>
-			</footer>
-		</div>
-		<div class="bod2">
-			<div class="container">
-						<div class="container2">
-							<header class="block">
-								<h2>About you</h2>	
-							</header>
-							<form action="">
-								<div class="c3">
-                  <label for="prof">Professional profil </label><br>
-                  <textarea name="prof" id="prof" class="textA" ></textarea>
-                  </div>
-                  <div class="c3">
-                    <label for="ach">Achievments </label><br>
-                    <textarea name="ach" id="ach" class="textA" placeholder="place / between every achievment"></textarea>
-                  </div>
-                  <div class="c3">
-                    <fieldset>
-                      <legend>Skills</legend>
-                        <div class="C3">
-                          <div class="c3">
-                            <label for="school">Skill</label><br>
-                            <input type="text"  class="inputs" id ="school" name="school" placeholder="e.g. Excel"><br>
-                          </div>
-                          <div class="c3">
-                            <label for="level">Level</label><br>
-                            <select name="level" id="level" class="inputs">
-                              <option value="Select Level">Select Level</option>
-                              <option value="Beginner">Beginner</option>
-                              <option value="Intermediate">Intermediate</option>
-                              <option value="Skilfull">Skilfull</option>
-                              <option value="Experienced">Experienced</option>
-                            </select>
-                          </div>
-                        </div>
-                    </fieldset>
-                  </div>
-								<br>
-								<input type="submit" value="Save" class="submit">
-							</form>	
-						</div>
-			  </div>
-			<br><br>
-			
-		</div>
-  </div>
-</body>
+    <link rel="icon" href="/images/LOGO.png">
+    <link rel="stylesheet" href="thirdPageStyle.css" />
+  </head>
+  <body>
+    <div class="bod">
+      <div class="barreGauche">
+        <div class="navProg">
+          <div class="page" id="heading">
+            <img src="/images/heading.png" alt="icon" class="icon" />
+            <p class="stage">Heading</p>
+          </div>
+          <div class="page education" id="education">
+            <img src="/images/education.png" alt="icon" class="icon" />
+            <p class="stage">Education</p>
+          </div>
+          <div class="page aboutU" id="aboutU">
+            <img src="/images/aboutYou.png" alt="icon" class="icon" />
+            <p class="stage">About You</p>
+          </div>
+          <div class="page profExperience" id="profExperience">
+            <img src="/images/profEXPP.png" alt="icon" class="icon" />
+            <p class="stage">Professional Experience</p>
+          </div>
+          <div class="page addInfo" id="addInfo">
+            <img src="/images/Addinfo.png" alt="icon" class="icon" />
+            <p class="stage">Additional informations</p>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="click">
+            <a class="click1" id="Back" href="secondPage.html">Go back</a>
+          </div>
+          <div class="click">
+            <a class="click1" id="Next" href="fourthPage.html">Next</a>
+          </div>
+        </footer>
+      </div>
+      <div class="bod2">
+        <div class="container">
+          <div class="text">About you</div>
+          <form action="#">
+            <div class="form-row">
+              <div class="input-data textarea">
+                <textarea rows="8" cols="80" placeholder=""></textarea>
+                <div class="underline"></div>
+                <label for="">Professional profil</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-data textarea">
+                <textarea rows="8" cols="80" placeholder=""></textarea>
+                <div class="underline"></div>
+                <label for="">Achievments</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-data">
+                <input type="text" placeholder="" />
+                <div class="underline"></div>
+                <label for="">Skills</label>
+              </div>
+              <div class="input-data">
+                <select name="level" id="level" class="inputs">
+                  <option value="Select Level">Select your skill level</option>
+                  <option value="Beginner">Beginner</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Skilfull">Skilfull</option>
+                  <option value="Experienced">Experienced</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row submit-btn">
+              <div class="input-data">
+                <div class="inner"></div>
+                <input type="submit" value="save" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

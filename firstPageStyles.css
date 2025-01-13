@@ -374,10 +374,10 @@ input[type="file"]::file-selector-button {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-top: 100px;
+    margin-top: 10%;
   }
   .stage {
-    font-size: 17px;
+    font-size: 14px;
   }
   .heading {
     background-color: rgb(171, 117, 208);
