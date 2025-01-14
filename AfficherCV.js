@@ -1,22 +1,21 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         
-        const userId = localStorage.getItem("userId");
-        const response = await fetch(`http://localhost:8003/AfficherCV/${userId}`);
+        const UserID = 1;
+        const response = await fetch(`http://localhost:8003/AfficherCV/${UserID}`);
         const cvData = await response.json();
 
       // les infos personnel
         document.querySelector('h1').textContent = 
-            `${cvData.heading.Fname} ${cvData.heading.Lname}`;
+            `${cvData.heading.FirstName} ${cvData.heading.LastName}`;
         document.querySelector('h2').textContent = cvData.heading.JobTitle;
         document.querySelector('.contact-info').textContent = 
             `${cvData.heading.phone} | ${cvData.heading.email} | ${cvData.heading.LinkedIn} | ${cvData.heading.city}, ${cvData.heading.country}`;
 
         // profile professionnel
-        if (cvData.profile) {
-            document.querySelector('.section:nth-child(2) p').textContent = 
-                cvData.profile.prof;
-        }
+        // if (cvData.profile) {
+        //     document.querySelector('.section:nth-child(2) p').textContent = cvData.profile.prof;
+        // }
 
         // section des reussite
         if (cvData.profile) {

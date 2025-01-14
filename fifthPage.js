@@ -3,7 +3,7 @@ document.getElementById('userForm').addEventListener('submit', async (e) => {
     
     const formData = {
         Interest: document.getElementById('Interest').value,
-        Hobbies: document.getElementById('Hobbies'),
+        Hobbies: document.getElementById('Hobbies').value,
         Languages: document.getElementById('Languages').value,
         level: document.getElementById('level').value,
         course: document.getElementById('course').value,
@@ -29,7 +29,7 @@ document.getElementById('userForm').addEventListener('submit', async (e) => {
             alert('Utilisateur enregistré avec succès!');
             document.getElementById('userForm').reset();
         } else {
-            alert(data.error || 'Erreur lors de l\'enregistrement');
+            alert(data.error || 'Erreur lors de l\'enregistrement ');
         }
     } catch (error) {
         console.error('Erreur:', error);

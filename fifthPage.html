@@ -37,29 +37,29 @@
             <a class="click1" id="Back" href="fourthPage.html">Go back</a>
           </div>
           <div class="click">
-            <a class="click1" id="Next" href="">Next</a>
+            <a class="click1" id="Next" href="CVtemplate.html">Next</a>
           </div>
         </footer>
       </div>
       <div class="bod2">
         <div class="container">
           <div class="text">Additional Informations</div>
-          <form action="#">
+          <form action="#" id="userForm" method="post" enctype="multipart/form-data">
             <div class="form-row">
               <div class="input-data">
-                <input type="text" placeholder="" />
+                <input type="text" id="Interest" placeholder="" />
                 <div class="underline"></div>
                 <label for="">Interest</label>
               </div>
               <div class="input-data">
-                <input type="text" placeholder="" />
+                <input type="text" id="Hobbies" placeholder="" />
                 <div class="underline"></div>
                 <label for="">Hobbies </label>
               </div>
             </div>
             <div class="form-row">
               <div class="input-data">
-                <input type="text" placeholder="" required />
+                <input type="text" id ="Languages" name="Languages" placeholder="" required />
                 <div class="underline"></div>
                 <label for="">Languages</label>
               </div>
@@ -77,26 +77,33 @@
             </div>
             <div class="form-row">
               <div class="input-data">
-                <input type="text" placeholder="" />
+                <input type="text" id ="course" name="course" placeholder="" />
                 <div class="underline"></div>
                 <label for="">Courses</label>
               </div>
               <div class="input-data">
-                <input type="text" placeholder="" />
+                <input type="text" id ="Institution" name="Institution" placeholder="" />
                 <div class="underline"></div>
                 <label for="">Institution </label>
               </div>
             </div>
             <div class="form-row">
               <div class="input-data">
-                <input type="date" placeholder="" />
+                <input type="date" id ="StartDate" name="StartDate" placeholder="" />
                 <div class="underline"></div>
                 <label for="">Start Date</label>
               </div>
               <div class="input-data">
-                <input type="date" placeholder="" />
+                <input type="date" id ="EndDate" name="EndDate" placeholder="" />
                 <div class="underline"></div>
                 <label for="">End date</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-data textarea">
+                <textarea rows="8" cols="80" name="Desc" id="Desc" placeholder=""></textarea>
+                <div class="underline"></div>
+                <label for="">Description</label>
               </div>
             </div>
             <div class="form-row submit-btn">
@@ -109,5 +116,6 @@
         </div>
       </div>
     </div>
+    <script src="fifthPage.js"></script>
   </body>
 </html>

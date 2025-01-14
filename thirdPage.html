@@ -44,24 +44,24 @@
       <div class="bod2">
         <div class="container">
           <div class="text">About you</div>
-          <form action="#">
+          <form action="#" id="userForm" method="post" enctype="multipart/form-data">
             <div class="form-row">
               <div class="input-data textarea">
-                <textarea rows="8" cols="80" placeholder=""></textarea>
+                <textarea rows="8" cols="80" name="prof" id="prof" placeholder=""></textarea>
                 <div class="underline"></div>
                 <label for="">Professional profil</label>
               </div>
             </div>
             <div class="form-row">
               <div class="input-data textarea">
-                <textarea rows="8" cols="80" placeholder=""></textarea>
+                <textarea rows="8" cols="80" name="achievement" id="achievement" placeholder=""></textarea>
                 <div class="underline"></div>
                 <label for="">Achievments</label>
               </div>
             </div>
             <div class="form-row">
               <div class="input-data">
-                <input type="text" placeholder="" />
+                <input type="text" id ="skill" name="skill" placeholder="" />
                 <div class="underline"></div>
                 <label for="">Skills</label>
               </div>
@@ -75,7 +75,6 @@
                 </select>
               </div>
             </div>
-
             <div class="form-row submit-btn">
               <div class="input-data">
                 <div class="inner"></div>
@@ -86,5 +85,6 @@
         </div>
       </div>
     </div>
+    <script src="thirdPage.js"></script>
   </body>
 </html>

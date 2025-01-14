@@ -13,29 +13,29 @@
         <div class="text">
            Sign Up
         </div>
-        <form action="#" id="signUpPage"> 
+        <form action="" method="post" id="userForm"> 
             <div class="form-row">
                 <div class="input-data">
-                   <input type="text" required>
+                   <input type="text" id="Fname" name="Fname"  required>
                    <div class="underline"></div>
                    <label for="">First Name</label>
                 </div>
                 <div class="input-data">
-                   <input type="text" required>
+                   <input type="text" id="Lname" name="Lname" required>
                    <div class="underline"></div>
                    <label for="">Last Name</label>
                 </div>
              </div>
            <div class="form-row">
               <div class="input-data">
-                 <input type="text" required>
+                 <input type="text" id="UserName" name="UserName" required>
                  <div class="underline"></div>
                  <label for="">User Name</label>
               </div>  
             </div>
             <div class="form-row">
               <div class="input-data">
-                 <input type="text" required>
+                 <input type="text" id="email" name="email" required>
                  <div class="underline"></div>
                  <label for="">Email Address</label>
               </div>  
@@ -60,9 +60,12 @@
              <a ><input type="submit" value="Sign Up" id="submit"></a>
           </div>
         </div>
+        <div class="form-row">
+         <p><a href="logInPage.html"> Sign In now</a></p>
+       </div>
       </form>  
     </div>
-    <script src="signUpJS.js">
+    <script src="signUpPage.js">
     </script>
   </body>
 </html>

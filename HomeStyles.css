@@ -218,3 +218,48 @@ footer{
 #terms{
   color:  rgb(125, 125, 125);
 }
+.questionsContainer {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.question {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  width: 60%;
+}
+
+.question h3 {
+  margin: 0;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question p {
+  margin: 10px 0 0;
+  display: none; /* Hide answers by default */
+  font-size: 16px;
+  color: #555;
+}
+
+.question.active p {
+  display: block; /* Show answers when the question is clicked */
+}
+
+.arrow {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.question.active .arrow {
+  transform: rotate(180deg); /* Rotate arrow when active */
+}

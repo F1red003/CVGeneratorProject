@@ -13,17 +13,17 @@
         <div class="text">
            Sign In
         </div>
-        <form action="#"> 
+        <form action="/login" method="post" id="userForm"> 
            <div class="form-row">
               <div class="input-data">
-                 <input type="text" required>
+                 <input type="text" id="Uname" name ="Uname" required>
                  <div class="underline"></div>
                  <label for="">User Name</label>
               </div>  
             </div>
             <div class="form-row">
             <div class="input-data">
-               <input type="password" required>
+               <input type="password" id="password" name ="password" required>
                <div class="underline"></div>
                <label for="">Password</label>
             </div>  
@@ -39,5 +39,6 @@
         </div>
       </form>  
     </div>
+    <script src="logInPage.js"></script>
   </body>
 </html>

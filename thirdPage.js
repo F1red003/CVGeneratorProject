@@ -3,7 +3,7 @@ document.getElementById('userForm').addEventListener('submit', async (e) => {
     
     const formData = {
         prof : document.getElementById('prof').value,
-        achievment : document.getElementById('achievment').value,
+        achievement : document.getElementById('achievement').value,
         skill : document.getElementById('skill').value,
         level:document.getElementById('level').value
     };
