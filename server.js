@@ -290,13 +290,8 @@ app.post('/fifthPage', function(req, res) {
 });
 
 // une get request pour afficher les données dans un modèle de CV
-// 
-
-
-
-
 app.get('/AfficherCV/:id', (req, res) => {
-    const userId = req.params.id; // Récupération de l'ID utilisateur depuis les paramètres
+    const userId = req.params.id; 
     const queries = {
         heading: 'SELECT * FROM heading WHERE userId = ?',
         education: 'SELECT * FROM education WHERE userId = ?',
@@ -319,7 +314,7 @@ app.get('/AfficherCV/:id', (req, res) => {
         });
     };
 
-    // Exécution de toutes les requêtes en parallèle
+    
     Promise.all([
         executeQuery(queries.heading, userId),
         executeQuery(queries.education, userId),
@@ -333,7 +328,7 @@ app.get('/AfficherCV/:id', (req, res) => {
         .then(results => {
             // Construction des données du CV
             const cvData = {
-                heading: results[0][0] || {}, // Premier résultat ou objet vide
+                heading: results[0][0] || {}, 
                 education: results[1],
                 profile: results[2],
                 skills: results[3],

@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             `${cvData.heading.phone} | ${cvData.heading.email} | ${cvData.heading.LinkedIn} | ${cvData.heading.city}, ${cvData.heading.country}`;
 
         // profile professionnel
-        // if (cvData.profile) {
-        //     document.querySelector('.section:nth-child(2) p').textContent = cvData.profile.prof;
-        // }
+        if (cvData.profile) {
+            document.querySelector('.section:nth-child(2) p').textContent = cvData.profile.prof;
+        }
 
         // section des reussite
         if (cvData.profile) {
