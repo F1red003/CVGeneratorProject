@@ -5,9 +5,9 @@ document.getElementById('userForm').addEventListener('submit', async (e) => {
         JobTitle: document.getElementById('JobTitle').value,
         city: document.getElementById('city').value,
         company: document.getElementById('company').value,
-        startDate: document.getElementById('startDate').value,
-        endDate: document.getElementById('endDate').value,
-        description: document.getElementById('description').value
+        startDate: document.getElementById('StartDate').value,
+        endDate: document.getElementById('EndDate').value,
+        description: document.getElementById('Desc').value
     };
 
     try {

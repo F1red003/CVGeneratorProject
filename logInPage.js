@@ -17,7 +17,7 @@ document.getElementById('userForm').addEventListener('submit', async (e) => {
         const data = await response.json();
         
         if (response.ok) {
-            alert('Utilisateur enregistré avec succès!');
+            alert('Login successful!');
             document.getElementById('userForm').reset();
             console.log(data.userId);
             localStorage.setItem("userId", data.userId);

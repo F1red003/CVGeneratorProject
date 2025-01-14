@@ -44,22 +44,22 @@
       <div class="bod2">
         <div class="container">
           <div class="text">Professional Experience</div>
-          <form action="#">
+          <form action="#" id="userForm" method="post" enctype="multipart/form-data">
             <div class="form-row">
               <div class="input-data">
-                <input type="text" placeholder="" required />
+                <input type="text" id ="JobTitle" name="JobTitle" placeholder="" required />
                 <div class="underline"></div>
                 <label for="">Job title</label>
               </div>
               <div class="input-data">
-                <input type="text" placeholder="" />
+                <input type="text" id ="city" name="city"  placeholder="" />
                 <div class="underline"></div>
                 <label for="">City </label>
               </div>
             </div>
             <div class="form-row">
               <div class="input-data">
-                <input type="text"  placeholder="" required />
+                <input type="text" id ="company" name="company"  placeholder="" required />
                 <div class="underline"></div>
                 <label for="">Company</label>
               </div>
@@ -67,25 +67,23 @@
             </div>
             <div class="form-row">
               <div class="input-data">
-                <input type="date" placeholder="" />
+                <input type="date" id ="StartDate" name="StartDate" placeholder="" />
                 <div class="underline"></div>
                 <label for="">Start Date</label>
               </div>
               <div class="input-data">
-                <input type="date" placeholder="" />
+                <input type="date" id ="EndDate" name="EndDate" placeholder="" />
                 <div class="underline"></div>
                 <label for="">End date</label>
               </div>
             </div>
             <div class="form-row">
               <div class="input-data textarea">
-                <textarea rows="8" cols="80" placeholder=""></textarea>
+                <textarea rows="8" cols="80" name="Desc" id="Desc" placeholder=""></textarea>
                 <div class="underline"></div>
                 <label for="">Job description</label>
               </div>
             </div>
-            
-
             <div class="form-row submit-btn">
               <div class="input-data">
                 <div class="inner"></div>
@@ -96,5 +94,6 @@
         </div>
       </div>
     </div>
+    <script src="fourthPage.js"></script>
   </body>
 </html>

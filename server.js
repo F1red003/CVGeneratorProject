@@ -3,14 +3,14 @@ const app = express();
 const mysql = require('mysql2');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
-const cors = require('cors');
+
 const path = require('path');
 const bcrypt = require('bcrypt');
+const UserID=1;
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors());
 app.use(express.json());
 app.use(express.static(__dirname));
 
@@ -27,7 +27,6 @@ var con = mysql.createConnection({
     password: process.env.MySQLPassword,
     database: process.env.DatabaseName
 });
-
 con.connect(error => {
     if (error) {
         console.error('Erreur de connexion à la base de données:', error);
@@ -125,7 +124,7 @@ app.post('/firstPage', function(req, res) {
     
     const { 
         FirstName, LastName, email, phone, adress, 
-        city, dateOfBirth, country, nationality, LinkedIn, JobTitle , UserID
+        city, dateOfBirth, country, nationality, LinkedIn, JobTitle 
     } = req.body;
 
     const query = `INSERT INTO heading (FirstName, LastName, email, phone, adress,city, dateOfBirth, country, nationality,LinkedIn, JobTitle ,userId) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)`;
@@ -151,7 +150,7 @@ app.post('/firstPage', function(req, res) {
 // Route API pour inserer dans la table education
 app.post('/secondPage', function(req, res) {
     const { 
-        school, city, degree, field, startDate, endDate, description,UserID
+        school, city, degree, field, startDate, endDate, description
     } = req.body;
 
     console.log('Données reçues:', req.body);
@@ -177,18 +176,15 @@ app.post('/secondPage', function(req, res) {
 
 // Route API pour inserer dans la table profile et skills
 app.post('/thirdPage', function(req, res) { 
-    const { prof, achievment, skill, level,UserID} = req.body;
-    const queryProfile = `INSERT INTO profile (prof, achievment, userId) VALUES (?, ?,?)`;
-    con.query(queryProfile, [prof, achievment, UserID],function(error, result) {
+    const { prof, achievement, skill, level} = req.body;
+    const queryProfile = `INSERT INTO profile (prof, achievements, userId) VALUES (?, ?,?)`;
+    con.query(queryProfile, [prof, achievement, UserID],function(error, result) {
             if (error) {
                 console.error('Error during insertion:', error);
                 res.status(500).json({ error: 'Error' });
                 return;
             }
-            res.status(201).json({ 
-                message: 'Successfully inserted', 
-                id: result.insertId 
-            });
+            
         }
     );
 
@@ -212,7 +208,7 @@ app.post('/thirdPage', function(req, res) {
 // Route API pour inserer dans la table experience
 app.post('/fourthPage', function(req, res) {
     const { 
-        JobTitle, city, company, startDate, endDate, description,UserID
+        JobTitle, city, company, startDate, endDate, description
     } = req.body;
 
     console.log('Données reçues:', req.body);
@@ -239,56 +235,50 @@ app.post('/fourthPage', function(req, res) {
 // Route API pour inserer dans la table courses, languages et interests
 app.post('/fifthPage', function(req, res) {
     const { 
-        Interest, Hobbies, Languages, level, course, Institution, StartDate, EndDate, Description, UserID
+        Interest, Hobbies, Languages, level, course, Institution, StartDate, EndDate, Description
     } = req.body;
 
     console.log('Données reçues:', req.body);
 
-    const queryCourses = `INSERT INTO courses (course, Institution, StartDate, EndDate, Description, userId) VALUES (?, ?, ?, ?, ?,?)`;
+    const queryCourses = `INSERT INTO courses (course, Institution, StartDate, EndDate, Description, userId) VALUES (?, ?, ?, ?, ?,1)`;
 
     con.query(
         queryCourses, 
-        [course, Institution, StartDate, EndDate, Description, UserID],
+        [course, Institution, StartDate, EndDate, Description],
         function(error, result) {
             if (error) {
                 console.error('Erreur lors de l\'insertion:', error);
-                res.status(500).json({ error: 'Erreur lors de l\'enregistrement' });
+                res.status(500).json({ error: 'Erreur lors de l\'enregistrement 1' });
                 return;
             }
-            res.status(201).json({ 
-                message: 'Utilisateur créé avec succès', 
-                id: result.insertId 
-            });
+            
         }
     );
 
-    const queryLanguages = `INSERT INTO languages (Languages, level, userId) VALUES (?, ? ,?)`;
+    const queryLanguages = `INSERT INTO languages (Languages, level, userId) VALUES (?, ? ,1)`;
 
     con.query(
         queryLanguages, 
-        [Languages, level , UserID],
+        [Languages, level ],
         function(error, result) {
             if (error) {
                 console.error('Erreur lors de l\'insertion:', error);
-                res.status(500).json({ error: 'Erreur lors de l\'enregistrement' });
+                res.status(500).json({ error: 'Erreur lors de l\'enregistrement 2' });
                 return;
             }
-            res.status(201).json({ 
-                message: 'Utilisateur créé avec succès', 
-                id: result.insertId 
-            });
+            
         }
     );
 
-    const queryInterest = `INSERT INTO interests (Interest, Hobbies, userId) VALUES (?, ? ,?)`;
+    const queryInterest = `INSERT INTO interests (Interests, Hobbies, userId) VALUES (?, ? ,1)`;
 
     con.query(
         queryInterest, 
-        [Interest, Hobbies, UserID],
+        [Interest, Hobbies],
         function(error, result) {
             if (error) {
                 console.error('Erreur lors de l\'insertion:', error);
-                res.status(500).json({ error: 'Erreur lors de l\'enregistrement' });
+                res.status(500).json({ error: 'Erreur lors de l\'enregistrement 3' });
                 return;
             }
             res.status(201).json({ 
@@ -300,79 +290,62 @@ app.post('/fifthPage', function(req, res) {
 });
 
 // une get request pour afficher les données dans un modèle de CV
+// 
+
+
+
+
 app.get('/AfficherCV/:id', (req, res) => {
-    const userId = req.params.id;
+    const userId = req.params.id; // Récupération de l'ID utilisateur depuis les paramètres
     const queries = {
-        heading: 'SELECT * FROM heading WHERE id = ?',
-        education: 'SELECT * FROM education WHERE id = ?',
-        profile: 'SELECT * FROM profile WHERE id = ?',
-        skills: 'SELECT * FROM skills WHERE id = ?',
-        experience: 'SELECT * FROM experience WHERE id = ?',
-        courses: 'SELECT * FROM courses WHERE id = ?',
-        interests: 'SELECT * FROM interests WHERE id = ?',
-        Languages:'SELECT * FROM languages WHERE id = ?'
+        heading: 'SELECT * FROM heading WHERE userId = ?',
+        education: 'SELECT * FROM education WHERE userId = ?',
+        profile: 'SELECT * FROM profile WHERE userId = ?',
+        skills: 'SELECT * FROM skills WHERE userId = ?',
+        experience: 'SELECT * FROM experience WHERE userId = ?',
+        courses: 'SELECT * FROM courses WHERE userId = ?',
+        interests: 'SELECT * FROM interests WHERE userId = ?',
+        languages: 'SELECT * FROM languages WHERE userId = ?'
     };
-    const cvData = {};
 
+    const executeQuery = (query, userId) => {
+        return new Promise((resolve, reject) => {
+            con.query(query, [userId], (error, results) => {
+                if (error) {
+                    return reject(error);
+                }
+                resolve(results);
+            });
+        });
+    };
+
+    // Exécution de toutes les requêtes en parallèle
     Promise.all([
-        new Promise((resolve, reject) => {
-            con.query(queries.heading, [userId], (error, results) => {
-                if (error) reject(error);
-                cvData.heading = results[0];
-                resolve();
-            });
-        }),
-        new Promise((resolve, reject) => {
-            con.query(queries.education, [userId], (error, results) => {
-                if (error) reject(error);
-                cvData.education = results;
-                resolve();
-            });
-        }),
-        new Promise((resolve, reject) => {
-            con.query(queries.profile, [userId], (error, results) => {
-                if (error) reject(error);
-                cvData.profile = results;
-                resolve();
-            });
-        }),
-        new Promise((resolve, reject) => {
-            con.query(queries.experience, [userId], (error, results) => {
-                if (error) reject(error);
-                cvData.experience = results;
-                resolve();
-            });
-        }),
-        new Promise((resolve, reject) => {
-            con.query(queries.courses, [userId], (error, results) => {
-                if (error) reject(error);
-                cvData.courses = results;
-                resolve();
-            });
-        }),
-        new Promise((resolve, reject) => {
-          con.query(queries.interests, [userId], (error, results) => {
-              if (error) reject(error);
-              cvData.interests = results;
-              resolve();
-          });
-        }),
-        new Promise((resolve, reject) => {
-          con.query(queries.Languages, [userId], (error, results) => {
-              if (error) reject(error);
-              cvData.Languages = results;
-              resolve();
-          });
-        }),
+        executeQuery(queries.heading, userId),
+        executeQuery(queries.education, userId),
+        executeQuery(queries.profile, userId),
+        executeQuery(queries.skills, userId),
+        executeQuery(queries.experience, userId),
+        executeQuery(queries.courses, userId),
+        executeQuery(queries.interests, userId),
+        executeQuery(queries.languages, userId)
     ])
-    .then(() => {
-        res.json(cvData);
-    })
-    .catch(error => {
-        console.error('Error fetching CV data:', error);
-        res.status(500).json({ error: 'Database error' });
-    });
+        .then(results => {
+            // Construction des données du CV
+            const cvData = {
+                heading: results[0][0] || {}, // Premier résultat ou objet vide
+                education: results[1],
+                profile: results[2],
+                skills: results[3],
+                experience: results[4],
+                courses: results[5],
+                interests: results[6],
+                languages: results[7]
+            };
+            res.json(cvData);
+        })
+        .catch(error => {
+            console.error('Error fetching CV data:', error);
+            res.status(500).json({ error: 'Database error' });
+        });
 });
-
-
-    
